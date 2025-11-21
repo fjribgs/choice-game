@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import gsap from "gsap";
 
 function App() {
-  const [isAVisited, setIsAVisited] = useState(false);
+  // const [isAVisited, setIsAVisited] = useState(false);
 
   const [currentPage, setCurrentPage] = useState('selection');
 
-  const handleVisitedOptionA = () => {
-    setIsAVisited(true);
+  // const handleVisitedOptionA = () => {
+  //   setIsAVisited(true);
 
-    setCurrentPage('selection');
-    console.log('Opsi A Selesai. Fitur B terbuka!');
-  };
+  //   setCurrentPage('selection');
+  //   console.log('Opsi A Selesai. Fitur B terbuka!');
+  // };
 
   const handleGoBack = () => {
     setCurrentPage('selection');
@@ -18,21 +19,28 @@ function App() {
 
   if (currentPage === 'selection') {
     return (
-      <div>
+      <div className="flex flex-col h-screen pt-10 gap-5">
 
-          <h2>Pilih Opsi: </h2>
+          <div className="border border-white px-5 py-4 rounded-lg flex-1">
 
-          <button onClick={() => setCurrentPage('optionA')}
-            className="cursor-pointer">
-            Jelajahi A
-          </button>
+            <p className="text-[16px] sm:text-[18px] lg:text-[20px]">You have just risen from your bed, and to cherish the beautiful morning, you decide to make your usual hot chocolate drink and sit on the porch of your house. What a serene sensation! The warming hot cocoa accompanying the tranquil rain (that is not hard) enough for its splatters) to not hit the tip of your feet. (I can probably sit here all day! Now, you have an hour left before you have to start preparing yourself to go to campus. What will you do?</p>
 
-          <button onClick={() => setCurrentPage('optionB')}
-            className="cursor-pointer">
-            Jelajahi B
-          </button>
+          </div>
 
-          <p>Status Kunci B: {isAVisited ? 'TERBUKA' : 'TERKUNCI'}</p>
+          <div id="button" 
+            className="flex-col flex-1 flex group text-[19px] lg:text-[21px] gap-3 w-full font-semibold">
+
+            <button onClick={() => setCurrentPage('optionA')}
+              className="cursor-pointer active:bg-amber-50 active:text-black hover:bg-amber-50 hover:text-black transition-all duration-300 border border-amber-50 rounded-lg px-4 py-2">
+              Read a book!
+            </button>
+
+            <button onClick={() => setCurrentPage('optionB')}
+              className="cursor-pointer active:bg-amber-50 active:text-black hover:bg-amber-50 hover:text-black transition-all duration-300 border border-amber-50 rounded-lg px-4 py-2">
+              Nothing.
+            </button>
+
+          </div>  
 
       </div>
     )
@@ -40,28 +48,30 @@ function App() {
 
   if (currentPage === 'optionA') {
     return (
-      <div>
+      <div className="flex h-screen flex-col justify-center items-center relative">
 
-        <h3>Konten Opsi A</h3>
-        <p>Yaya</p>
+        <h3>What book will you read?</h3>
         <button onClick={handleVisitedOptionA}>
-          Kembali
+          Continue <span className="italic">Pride and Prejudice</span> (currently on chapter 44)        
+        </button>
+
+        <button onClick={handleVisitedOptionA}>
+          Start <span className="italic">Le Petit Prince</span>       
         </button>
 
       </div>
     )
-  }
+  } 
 
   if (currentPage === 'optionB') {
     return (
-      <div>
+      <div className="flex h-screen flex-col justify-center items-center relative">
 
-        <h3>Konten Opsi B</h3>
-        <p>Jing</p>
+        <h3>Well, while the rain is quite an entertaining sight itself, it will probably become boring within the next hour. </h3>
 
         <button onClick={() => setCurrentPage('optionB_advanced')}
           className={`${isAVisited ? 'flex' : 'hidden'}`}>Lanjut Ke Halaman B</button>
-        <button onClick={handleGoBack}>Kembali ke A</button>
+        <button onClick={handleGoBack}>Go back.</button>
 
       </div>
     )
@@ -69,7 +79,7 @@ function App() {
 
   if (currentPage === 'optionB_advanced') {
     return (
-      <div style={{ padding: '20px', border: '1px solid #FF9800', borderRadius: '8px' }}>
+      <div className="flex h-screen flex-col justify-center items-center relative">
         <h3>🏆 Konten Opsi B Lanjutan!</h3>
         <p>Anda berhasil mencapai halaman ini karena telah menyelesaikan prasyarat Opsi A.</p>
         <button onClick={handleGoBack}>
@@ -78,10 +88,6 @@ function App() {
       </div>
     );
   }
-
-  return (
-    <div>Nigga</div>
-  )
 }
 
 export default App;
