@@ -1,93 +1,59 @@
-import { useState, useEffect } from "react";
-import gsap from "gsap";
+import { useState } from "react";
 
 function App() {
-  // const [isAVisited, setIsAVisited] = useState(false);
+    const [currentPage, setCurrentPage] = useState('landingPage');
 
-  const [currentPage, setCurrentPage] = useState('selection');
+    if (currentPage === 'landingPage') {
+        return (
+            <div id="landingPage"
+                className="flex flex-col items-center justify-center text-center gap-10 w-screen px-[18px] lg:px-[60px]">
 
-  // const handleVisitedOptionA = () => {
-  //   setIsAVisited(true);
+                <h1 className="font-normal text-[26px] xl:text-[37px] sm:text-[34px]">Electronic Literature <br />Final Project</h1>
 
-  //   setCurrentPage('selection');
-  //   console.log('Opsi A Selesai. Fitur B terbuka!');
-  // };
+                <button onClick={() => setCurrentPage('bedroom')}
+                    className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer">
+                    Start
+                </button>
 
-  const handleGoBack = () => {
-    setCurrentPage('selection');
-  };
+            </div>
+        )
+    }
 
-  if (currentPage === 'selection') {
-    return (
-      <div className="flex flex-col h-screen pt-10 gap-5">
+    if (currentPage === 'bedroom') {
+        return (
+            <div id="bedroom"
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
 
-          <div className="border border-white px-5 py-4 rounded-lg flex-1">
+                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
 
-            <p className="text-[16px] sm:text-[18px] lg:text-[20px]">You have just risen from your bed, and to cherish the beautiful morning, you decide to make your usual hot chocolate drink and sit on the porch of your house. What a serene sensation! The warming hot cocoa accompanying the tranquil rain (that is not hard) enough for its splatters) to not hit the tip of your feet. (I can probably sit here all day! Now, you have an hour left before you have to start preparing yourself to go to campus. What will you do?</p>
+                    <p>
+                        You have just risen from your bed, and to cherish the beautiful morning, you decide to make your usual hot chocolate drink and sit on the porch of your house. What a serene sensation! The warming hot cocoa accompanying the tranquil rain (that is not hard enough for its splatters to not hit the tip of your feet).
+                        <br /> <br />
+                        “I can probably sit here all day!” 
+                        <br /> <br />
+                        Now, you have an hour left before you have to start preparing yourself to go to campus. What will you do?
+                    </p>
 
-          </div>
+                </div>
 
-          <div id="button" 
-            className="flex-col flex-1 flex group text-[19px] lg:text-[21px] gap-3 w-full font-semibold">
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-            <button onClick={() => setCurrentPage('optionA')}
-              className="cursor-pointer active:bg-amber-50 active:text-black hover:bg-amber-50 hover:text-black transition-all duration-300 border border-amber-50 rounded-lg px-4 py-2">
-              Read a book!
-            </button>
+                    <button onClick={() => setCurrentPage('nothing')}
+                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
+                        Nothing.
+                    </button>
 
-            <button onClick={() => setCurrentPage('optionB')}
-              className="cursor-pointer active:bg-amber-50 active:text-black hover:bg-amber-50 hover:text-black transition-all duration-300 border border-amber-50 rounded-lg px-4 py-2">
-              Nothing.
-            </button>
+                    <button onClick={() => setCurrentPage('readBook')}
+                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
+                        Read a Book!
+                    </button>
 
-          </div>  
+                </div>
 
-      </div>
-    )
-  }
+            </div>
+        )
+    }
 
-  if (currentPage === 'optionA') {
-    return (
-      <div className="flex h-screen flex-col justify-center items-center relative">
-
-        <h3>What book will you read?</h3>
-        <button onClick={handleVisitedOptionA}>
-          Continue <span className="italic">Pride and Prejudice</span> (currently on chapter 44)        
-        </button>
-
-        <button onClick={handleVisitedOptionA}>
-          Start <span className="italic">Le Petit Prince</span>       
-        </button>
-
-      </div>
-    )
-  } 
-
-  if (currentPage === 'optionB') {
-    return (
-      <div className="flex h-screen flex-col justify-center items-center relative">
-
-        <h3>Well, while the rain is quite an entertaining sight itself, it will probably become boring within the next hour. </h3>
-
-        <button onClick={() => setCurrentPage('optionB_advanced')}
-          className={`${isAVisited ? 'flex' : 'hidden'}`}>Lanjut Ke Halaman B</button>
-        <button onClick={handleGoBack}>Go back.</button>
-
-      </div>
-    )
-  }
-
-  if (currentPage === 'optionB_advanced') {
-    return (
-      <div className="flex h-screen flex-col justify-center items-center relative">
-        <h3>🏆 Konten Opsi B Lanjutan!</h3>
-        <p>Anda berhasil mencapai halaman ini karena telah menyelesaikan prasyarat Opsi A.</p>
-        <button onClick={handleGoBack}>
-          Kembali ke Pilihan
-        </button>
-      </div>
-    );
-  }
 }
 
 export default App;
