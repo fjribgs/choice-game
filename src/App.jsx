@@ -19,6 +19,7 @@ function App() {
         )
     }
 
+    // from landingPage
     if (currentPage === 'bedroom') {
         return (
             <div id="bedroom"
@@ -62,6 +63,7 @@ function App() {
         )
     }
 
+    // from bedroom
     if (currentPage === 'nothing') {
         return (
 
@@ -90,6 +92,7 @@ function App() {
         )
     }
 
+    // from bedroom
     if (currentPage === 'readBook') {
         return (
 
@@ -123,6 +126,7 @@ function App() {
         )
     }
 
+    // from bedroom
     if (currentPage === 'openPhone') {
         return (
 
@@ -147,6 +151,32 @@ function App() {
         )
     }
 
+    // from readBook
+    if (currentPage === 'startLePetitPrince') {
+        return (
+
+            <div id="startLePetitPrince"
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+
+                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+
+                    <p>
+                        <button onClick={() => setCurrentPage('readBook')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200">“Eh, I don’t think I’d want to start something new today..”</button>
+                    </p>
+
+                </div>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+        
+                </div>
+
+            </div>
+
+        )
+    }
+
+    // from readBook
     if (currentPage === 'continuePridePrejudice') {
         return (
 
@@ -175,6 +205,7 @@ function App() {
         )
     }
 
+    // from continuePridePrejudice
     if (currentPage === 'continueReadingPridePrejudice') {
         return (
 
@@ -183,7 +214,7 @@ function App() {
 
                 <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
 
-                    <p className="text-red-3">
+                    <p className="text-red-400">
                         [<span className="font-bold">INTERRUPTION</span>] You find yourself opening your phone.
                         <br /> 
                         [<span className="font-bold">CAUTION</span>] YOU BEGIN TO FEEL UNEASY.
@@ -193,15 +224,68 @@ function App() {
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <button onClick={() => setCurrentPage('continuePridePrejudice')}
+                    <button onClick={() => setCurrentPage('findYourselfOpeningPhone')}
                         className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
                         Fight BACK!!!
                     </button>
 
-                    <button onClick={() => setCurrentPage('continueReadingPridePrejudice')}
+                    <button onClick={() => setCurrentPage('checkMessages')}
                         className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        (do i need another option?)
+                        Just check for text messages.
                     </button>
+
+                </div>
+
+            </div>
+
+        )
+    }
+
+    // from continueReadingPridePrejudice
+    if (currentPage === 'checkMessages') {
+        return (
+
+            <div id="checkMessages"
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+
+                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+
+                    <p>
+                        You have received none.
+                    </p>
+
+                </div>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <button onClick={() => setCurrentPage('findYourselfOpeningPhone')}
+                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
+                        (continue reading)
+                    </button>
+
+                </div>
+
+            </div>
+
+        )
+    }
+
+    // from checkMessages
+    if (currentPage === 'findYourselfOpeningPhone') {
+        return (
+
+            <div id="findYourselfOpeningPhone"
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+
+                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+
+                    <p className="text-red-400">
+                        [<span className="font-bold">ERROR</span>] [<span className="font-bold">INTERRUPTION</span>] You find yourself opening your phone.
+                    </p>
+
+                </div>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
                 </div>
 
