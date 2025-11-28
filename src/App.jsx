@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ActionButton from "./components/ActionButton";
+import TextBox from "./components/TextBox";
 
 function App() {
     const [currentPage, setCurrentPage] = useState('landingPage');
@@ -22,45 +24,36 @@ function App() {
     // from landingPage
     if (currentPage === 'bedroom') {
         return (
-            <div id="bedroom"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+            <div 
+                className="flex flex-col h-screen text-center w-screen px-[18px] lg:px-[60px] py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-auto font-light">
+                <TextBox>
 
                     <p>
                         You have just risen from your bed, and to cherish the beautiful morning, you decide to make your usual hot chocolate drink and sit on the porch of your house. What a serene sensation! The warming hot cocoa accompanying the tranquil rain, which isn’t hard enough that its splatters don’t hit the tip of your feet.
                         <br /><br />
-                        <span className="text-yellow-100">“I could probably sit here all day!” 
-                        <br /><br /></span>
-                        What better way to start an important day like this? Remember, you have a crucial theatrical performance tonight at 7, yesterday (Sunday) was the last day you should’ve practiced the lines and gestures. Today should be entirely focused on <i>clearing your mind</i> and going through the day normally. Try and unwind; you often get nervous when things don’t go your desired way. Otherwise, your <i>shame demon</i> will come to haunt you. You can’t be having that, can you?
+                        “I could probably sit here all day!” 
+                        <br /><br />
+                        What better way to start an important day like this? Remember, you have a crucial theatrical performance tonight at 7, yesterday (Sunday) was the last day you should’ve practiced the lines and gestures. Today should be entirely focused on clearing your mind and going through the day normally. Try and unwind; you often get nervous when things don’t go your desired way. Otherwise, your shame demon will come to haunt you again. You can’t be having that, can you?
                         <br /><br />
                         Now, you have one relaxing hour left before you have to start preparing yourself to go to campus. What will you do?
-
                     </p>
 
-                </div>
+                </TextBox>
 
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+                <div className="flex flex-col w-full my-6 h-full gap-2.5">
 
-                    <button onClick={() => setCurrentPage('nothing')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Nothing.
-                    </button>
-
-                    <button onClick={() => setCurrentPage('readBook')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Read a Book!
-                    </button>
-
-                    <button onClick={() => setCurrentPage('openPhone')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Open your phone and watch Instagram Reels.
-                    </button>
+                    <ActionButton onClick={() => setCurrentPage('nothing')} text="Nothing." />
+                    
+                    <ActionButton onClick={() => setCurrentPage('readBook')} text="Read a book!" />
+                    
+                    <ActionButton onClick={() => setCurrentPage('openPhone')} text="Open your phone and watch Instagram Reels." />
 
                 </div>
 
             </div>
         )
+            
     }
 
     // from bedroom
@@ -68,22 +61,19 @@ function App() {
         return (
 
             <div id="nothing"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
                     <p>
                         Well, while the rain is quite an entertaining sight itself, it will probably become boring within the next hour.
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <button onClick={() => setCurrentPage('bedroom')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Go Back.
-                    </button>
+                    <ActionButton onClick={() => setCurrentPage('bedroom')} text="(Go back)" />
 
                 </div>
 
@@ -97,26 +87,30 @@ function App() {
         return (
 
             <div id="readBook"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
                     <p>
                         (What book will you read?)
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <button onClick={() => setCurrentPage('continuePridePrejudice')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Continue Pride and Prejudice (currently on chapter 44)
-                    </button>
-
                     <button onClick={() => setCurrentPage('startLePetitPrince')}
                         className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Start Le Petit Prince!
+
+                        Start <i>Le Petit Prince</i>!
+
+                    </button>
+
+                    <button onClick={() => setCurrentPage('continuePridePrejudice')}
+                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
+
+                        Continue <i>Pride and Prejudice</i> (currently on chapter 46)
+
                     </button>
 
                 </div>
@@ -131,16 +125,16 @@ function App() {
         return (
 
             <div id="openPhone"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
                     <p>
                         <button onClick={() => setCurrentPage('bedroom')}
                             className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200">Is that really how you want to savor the day?</button>
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
@@ -156,19 +150,19 @@ function App() {
         return (
 
             <div id="startLePetitPrince"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
                     <p>
                         <button onClick={() => setCurrentPage('readBook')}
                             className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200">“Eh, I don’t think I’d want to start something new today..”</button>
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-        
+
                 </div>
 
             </div>
@@ -180,23 +174,20 @@ function App() {
     if (currentPage === 'continuePridePrejudice') {
         return (
 
-            <div id="readBook"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+            <div id="continuePridePrejudice"
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
                     <p className="text-yellow-100">
                         “Now, where was I? The last time I read this book was two days ago, and the scene where I left off I can’t immediately remember. Oh! Yes! Lydia had just fled with Wickham to marry in Scotland! I remember now. What an unexpected twist, indeed. I am very intrigued in finding out what happens later, especially since Darcy’s politeness during the course has undoubtedly entranced Elizabeth.”
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <button onClick={() => setCurrentPage('continueReadingPridePrejudice')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        (continue reading)
-                    </button>
+                    <ActionButton onClick={() => setCurrentPage('continueReadingPridePrejudice')} text="(continue reading)" />
 
                 </div>
 
@@ -210,9 +201,9 @@ function App() {
         return (
 
             <div id="continueReadingPridePrejudice"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
                     <p className="text-red-400">
                         [<span className="font-bold">INTERRUPTION</span>] You find yourself opening your phone.
@@ -220,19 +211,13 @@ function App() {
                         [<span className="font-bold">CAUTION</span>] YOU BEGIN TO FEEL UNEASY.
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <button onClick={() => setCurrentPage('findYourselfOpeningPhone')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Fight BACK!!!
-                    </button>
+                    <ActionButton onClick={() => setCurrentPage('findYourselfOpeningPhone')} text="Fight BACK!!!" />
 
-                    <button onClick={() => setCurrentPage('checkMessages')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        Just check for text messages.
-                    </button>
+                    <ActionButton onClick={() => setCurrentPage('checkMessages')} text="Just check for text messages." />
 
                 </div>
 
@@ -246,22 +231,44 @@ function App() {
         return (
 
             <div id="checkMessages"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
                     <p>
                         You have received none.
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <button onClick={() => setCurrentPage('findYourselfOpeningPhone')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-                        (continue reading)
-                    </button>
+                    <ActionButton onClick={() => setCurrentPage('findYourselfOpeningPhone')} text="(continue reading)" />
+
+                </div>
+
+            </div>
+        )
+    }
+
+    // from checkMessages
+    if (currentPage === 'findYourselfOpeningPhone') {
+        return (
+
+            <div id="checkMessages"
+                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p className="text-red-400">
+                        [<span className="font-bold">ERROR</span>] [<span className="font-bold">INTERRUPTION</span>] You find yourself opening your phone.
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('continueReading2')} text="(continue reading)" />
 
                 </div>
 
@@ -270,22 +277,28 @@ function App() {
         )
     }
 
-    // from checkMessages
-    if (currentPage === 'findYourselfOpeningPhone') {
+    // from findYourselfOpeningPhone
+    if (currentPage === 'continueReading2') {
         return (
 
-            <div id="findYourselfOpeningPhone"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-10">
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
-                <div className="flex-1 text-start text-[14px] md:text-[15px] lg:text-[16px] xl:text-[18px] border-2 border-(--normal) rounded-2xl px-5 py-[26px] h-full font-light">
+                <TextBox>
 
-                    <p className="text-red-400">
-                        [<span className="font-bold">ERROR</span>] [<span className="font-bold">INTERRUPTION</span>] You find yourself opening your phone.
+                    <p>
+                        “What a lovely forenoon, rain and hot cocoa pair
+                        Befriending me and my book beneath the frore air
+                        <br /><br />
+                        If only such a malaise was ascribable
+                        Wontedly checking my phone, as if my own child
+                        My Austen reading time would be inerrable”
                     </p>
 
-                </div>
+                </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('findYourselfOpeningPhone')} text="(continue reading)" />
 
                 </div>
 
