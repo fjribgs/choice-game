@@ -312,6 +312,7 @@ function App() {
         )
     }
 
+    // from continueReading2
     if (currentPage === 'continueReading3') {
         return (
 
@@ -349,6 +350,7 @@ function App() {
         )
     }
 
+    // from continueReading3
     if (currentPage === 'continueReading4') {
         return (
 
@@ -381,6 +383,7 @@ function App() {
         )
     }
 
+    // from continueReading4
     if (currentPage === 'kindlyAskSomeone') {
         return (
 
@@ -405,6 +408,7 @@ function App() {
         )
     }
 
+    // from continueReading4
     if (currentPage === 'takeASelfie') {
         return (
 
@@ -425,7 +429,7 @@ function App() {
                         <br /> <br />
                         <span className="text-red-400">“YOU ARE WEIRD. YOU ARE OUT OF PLACE. YOU ARE ANAMOLOUS, AND UNWORTHY OF CONFORMITY.”</span>
                         <br /> <br />
-                        You must counter. <button onClick={() => setCurrentPage('continueReading3')}
+                        You must counter. <button onClick={() => setCurrentPage('mustCounter')}
                             className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">You CAN’T have this last until nightfall. </button>
                     </p>
 
@@ -439,7 +443,6 @@ function App() {
 
         )
     }
-
 }
 
 export default App;
