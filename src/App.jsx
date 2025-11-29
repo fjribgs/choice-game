@@ -443,6 +443,199 @@ function App() {
 
         )
     }
+
+    // from takeASelfie
+    if (currentPage === 'mustCounter') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        You go to class, hoping the fun subject of English Literature frees you of your weighty inhibition. Surprisingly, by good hap, the intricate discussion of Terry Eagleton’s works serves as a semi-effective antidote for the disturbance.
+                        <br /><br />
+                        <span className="text-yellow-100">“Perhaps I should take note of this in my head, while it lasts.”</span>
+                        <br /><br />
+                        As it transpires, the second class of the day is cancelled and you are now at leisure to do anything you want. You decide to hit the faculty canteen before contemplating the rest of the day.
+                        <br /><br />
+                        Just by the wide threshold of the canteen room, two students, male, wearing striking androgynous outfits — though more hyperfeminine than the typical — approach you. One is wearing a crop top, belly button showing, and the other one is wearing an Armani cashmere shirt with half of the buttons opened (and no inside tshirt (indicating that chest is showing)). They look like a couple, or maybe just friends. They say they are from Business and are looking for a Mr. Beau. They seem to be completely lost, and in dire need of specific descriptions.
+                        <br /><br />
+                        Your temporary happiness, along with your smile, instantly fades. A stealthy wave of hatred and contempt swashes your air. 
+                        <br /><br />
+                        [Student 1]: “We are sorry, but surely, you understand how it is in our campus, right? Where every building looks exactly like the next? Plus, this Mr. Beau barely gave us any details.”
+                        <br /><br />
+                        (person 2 adds something insignificant that is sassier)
+                        <br /><br />
+                        <span className="text-yellow-100">“Oh, they ask so nicely! Why do I consist of such haughtiness?! They haven’t done a single bad thing to me. <button onClick={() => setCurrentPage('betrayedPrinciples')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">I have betrayed my own principles…”</button></span>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    }
+
+    // from mustCounter
+    if (currentPage === 'betrayedPrinciples') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        You realize that you have been such a terrible and unfair interlocutor even though you haven’t spoken one word! Unbelievable; years of (digital and way-too-intimate duologues accumulating rhetorical poison) have created such an evil spirit! “And, oh, to think that I was stupid enough to let it show … what can I ever say to compensate…?” 
+                        <br /><br />
+                        The Shame Demon stares glaringly.
+                        <br /><br />
+                        [Student 1 seems to notice your haze within the split second and adds]: “Or, perhaps, you can point us to somebody who does know, I realize that this may be a very awkward spot to talk.”
+                        <br /><br />
+                        <span className="text-yellow-100">“Oh, how considerate… If I wasn’t so CONCEITED and not immediately PETULATE I might weep a tear or two.’</span>
+                        <br /><br />
+                        Ten very long seconds have passed, and a group of friends from outside the canteen — though still far away — appear to walk toward your party and inside. The three of you instinctively step aside. 
+                        <br /><br />
+                        <span className="text-yellow-100">“Now, I must say something.”</span>
+                        <br /><br />
+                        To ease the interaction and, above all, your state of mind, <button onClick={() => setCurrentPage('shouldCompensate')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">you should compensate!</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    }
+
+    // from betrayedPrinciples
+    if (currentPage === 'shouldCompensate') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        You begin to tell an overly and unnecessarily detailed description of Mr. Beau’s office, along with where he usually hangs out, what brand of shirt he likes, what type of coffee he likes, and even the last five digits of social security number. In addition to merely pointing, you wholly narrate the account of walking toward his room, with your speech inadvertently loud and nimble.
+                        <br /><br />
+                        For conversing with them with such enthusiasm, it seems, caught the attention of a group of students sitting not far from your left. What a surprise, it’s the same dudes that stared at you under the pink tree. 
+                        <br /><br />
+                        <span className="text-yellow-100">“How small is this faculty??” </span>
+                        <br /><br />
+                        This time, however, they were wearing basketball gears, presumably preparing themselves to play in the gym, seeing as they’re not sweating.
+                        <br /><br />
+                        <button onClick={() => setCurrentPage('doneHorrificJob')}
+                            className="cursor-pointer text-red-300 underline hover:font-bold transition-all duration-200 text-start">You’ve done a horrific job of keeping yourself in check.</button> 
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from shouldCompensate
+    if (currentPage === 'doneHorrificJob') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        <span className="text-yellow-100">“YEAH! YOU’RE TELLING ME.”</span>
+                        <br /><br />
+                        The two students both thank you with civility like no other for giving clear directions.
+                        <br /><br />
+                        <span className="text-yellow-100">“Oh, how undeserving am I to even stand before these people…”</span>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('standStill')} text=" Stand still and excessively dwell on what just happened." />
+
+                    <ActionButton onClick={() => setCurrentPage('goToCanteen')} text="Go inside the canteen as you were." />
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+    
+    // from doneHorrificJob
+    if (currentPage === 'standStill') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        <button onClick={() => setCurrentPage('doneHorrificJob')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Why would you do that?</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from doneHorrificJob
+    if (currentPage === 'goToCanteen') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        What do?
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('findASeat')} text="Find a seat before ordering and sit still and excessively dwell on what just happened." />
+
+                    <ActionButton onClick={() => setCurrentPage('approachMainCounter')} text=" Approach the main counter and order (something) to eat and drink." />
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
 }
 
 export default App;
