@@ -817,9 +817,9 @@ function App() {
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <ActionButton onClick={() => setCurrentPage('findASeat')} text="Continue Pride and Prejudice (currently on chapter 46)" />
+                    <ActionButton onClick={() => setCurrentPage('onCanteen')} text="Continue Pride and Prejudice (currently on chapter 46)" />
 
-                    <ActionButton onClick={() => setCurrentPage('approachMainCounter')} text="Start Le Petit Prince!" />
+                    <ActionButton onClick={() => setCurrentPage('onCanteen')} text="Start Le Petit Prince!" />
 
                 </div>
 
@@ -829,6 +829,121 @@ function App() {
     
     }
 
+    // from onCashier
+    if (currentPage === 'onCanteen') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        Curiously, for some mysterious reason, despite how many would view the atmosphere as uncomfortable for reading, you find more success in the process. Perhaps it’s because of the consideration that the discomfort would be more profound when opening the phone to watch short-form videos compared to that when reading a book.
+                        <br /><br />
+                        <span className="text-yellow-100">“Oh, who cares? If anything, it is good news.”</span>
+                        <br /><br />
+                        Just on the corner of your vision is the sight of that same group of students from outside. Due to the gestating rain, they migrate inside the building to seek shelter. For some godforsaken reason, they still occasionally stare at you weird.
+                        <br /><br />
+                        <button onClick={() => setCurrentPage('?!?!?')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">?!?!??!?!!?!?!?!</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from onCanteen
+    if (currentPage === '?!?!?') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p className="text-yellow-100">
+                        “What now?! Is it because … Oh, the way I sit?? Could it be? This is a STANDARD LEG CROSS. I wish to gain, at this very moment, the trait of omnipotence so that I can banish this enmity from all of your minds! You all must be dull souls; this is a perfectly comfortable position to read. SHAME ON YOU.”
+                        <br /><br />
+                        <button onClick={() => setCurrentPage('shameOnYou')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">“No, shame on you…”</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from ?!?!?
+    if (currentPage === 'shameOnYou') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        You open your phone, but this time with a clear purpose. You ask your buddy Fick to ask him where he’s at. For all one knows, maybe the company of an authentic personality is all you need to calm down. And, fortunately, his tendency to respond to text messages jiffy quick makes it all better.
+                        <br /><br />
+                        Fick tells you that he’s currently waiting for his Beef Fried Rice … Oh, he’s here!
+                        <br /><br />
+                        <button onClick={() => setCurrentPage('shouldITextFick')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">“Should I text him where I’m at, or should I just approach him?”</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from shameOnYou
+    if (currentPage === 'shouldITextFick') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        <button onClick={() => setCurrentPage('doneHorrificJob')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Why would you do that?</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('findASeat')} text="Find a seat before ordering and sit still and excessively dwell on what just happened." />
+
+                    <ActionButton onClick={() => setCurrentPage('approachMainCounter')} text="Approach the main counter and order (something) to eat and drink." />
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
     if (currentPage === 'goToCanteen') {
         return (
 
