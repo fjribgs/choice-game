@@ -493,8 +493,32 @@ function App() {
                     <p>
                         You realize that you have been such a terrible and unfair interlocutor even though you haven’t spoken one word! Unbelievable; years of (digital and way-too-intimate duologues accumulating rhetorical poison) have created such an evil spirit! “And, oh, to think that I was stupid enough to let it show … what can I ever say to compensate…?” 
                         <br /><br />
-                        The Shame Demon stares glaringly.
+                        <button onClick={() => setCurrentPage('betrayedPrinciples2')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">The Shame Demon stares glaringly.</button>
                         <br /><br />
+                        
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    }
+
+    // from betrayedPrinciples
+    if (currentPage === 'betrayedPrinciples2') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
                         [Student 1 seems to notice your haze within the split second and adds]: “Or, perhaps, you can point us to somebody who does know, I realize that this may be a very awkward spot to talk.”
                         <br /><br />
                         <span className="text-yellow-100">“Oh, how considerate… If I wasn’t so CONCEITED and not immediately PETULATE I might weep a tear or two.’</span>
@@ -518,7 +542,7 @@ function App() {
         )
     }
 
-    // from betrayedPrinciples
+    // from betrayedPrinciples2
     if (currentPage === 'shouldCompensate') {
         return (
 
@@ -626,7 +650,204 @@ function App() {
 
                     <ActionButton onClick={() => setCurrentPage('findASeat')} text="Find a seat before ordering and sit still and excessively dwell on what just happened." />
 
-                    <ActionButton onClick={() => setCurrentPage('approachMainCounter')} text=" Approach the main counter and order (something) to eat and drink." />
+                    <ActionButton onClick={() => setCurrentPage('approachMainCounter')} text="Approach the main counter and order (something) to eat and drink." />
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from goToCanteen
+    if (currentPage === 'findASeat') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        <button onClick={() => setCurrentPage('goToCanteen')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Why would you do that (because, he kinda says to himself, he cannot get it out his mind!)</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from goToCanteen
+    if (currentPage === 'approachMainCounter') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p className="text-yellow-100">
+                        “Hmm … What should I eat for lunch?”
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('onCashier')} text="Teriyaki Chicken and Rice with Stir-Fried Broccoli." />
+
+                    <ActionButton onClick={() => setCurrentPage('onCashier')} text="Bolognese Fusilli." />
+
+                    <ActionButton onClick={() => setCurrentPage('clubSandwich')} text="Club Sandwich." />
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from approachMainCounter
+    if (currentPage === 'clubSandwich') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        You don’t like lettuce. <button onClick={() => setCurrentPage('clubSandwich2')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Just … take out the lettuce?</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from clubSandwich
+    if (currentPage === 'clubSandwich2') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p className="text-yellow-100">
+                        “But many others are ordering beside and behind me. What will they think of the weird request? Maybe I should just order it as usual and take the lettuce out manually.”
+                        <br /><br />
+                        “......”
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('onCashier')} text="“Do just that.”" />
+
+                    <ActionButton onClick={() => setCurrentPage('clubSandwich3')} text="“Oh, who cares?! Be a lad and just order without it!”" />
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from clubSandwich2
+    if (currentPage === 'clubSandwich3') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        “Ahh….. What a glorious sensation. <button onClick={() => setCurrentPage('onCashier')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Take THAT, DEMON!”</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    // from clubSandwich3 and approachMainCounter
+    if (currentPage === 'onCashier') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        The cashier tells you that the food will probably take longer than usual since the place is crowded. Since you plan to eat alone anyways, and have no obligation urgently due, 
+                        <br /><br />
+                        <span className="text-yellow-100">“Eh, whatever, it’s fine.”</span>
+                        <br /><br />
+                        You buy a cold bottle of water and walk around the large room to try and find an empty seat.
+                        <br /><br />
+                        Fortunately, almost at the very south corner of the canteen is an entirely empty bench, isolated, and with the neighboring being unoccupied as well. After walking unnecessarily fast, you excitedly occupy it. Since your very favorable position muffles the surrounding commotion, you decide to try and read a book again to try and prove yourself that you, indeed, are MORE THAN CAPABLE to fend your <i>demon</i> off.
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('findASeat')} text="Continue Pride and Prejudice (currently on chapter 46)" />
+
+                    <ActionButton onClick={() => setCurrentPage('approachMainCounter')} text="Start Le Petit Prince!" />
+
+                </div>
+
+            </div>
+
+        )
+    
+    }
+
+    if (currentPage === 'goToCanteen') {
+        return (
+
+            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        <button onClick={() => setCurrentPage('doneHorrificJob')}
+                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Why would you do that?</button>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
+
+                    <ActionButton onClick={() => setCurrentPage('findASeat')} text="Find a seat before ordering and sit still and excessively dwell on what just happened." />
+
+                    <ActionButton onClick={() => setCurrentPage('approachMainCounter')} text="Approach the main counter and order (something) to eat and drink." />
 
                 </div>
 
