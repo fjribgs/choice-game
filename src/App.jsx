@@ -1,59 +1,19 @@
 import { useState } from "react";
 import ActionButton from "./components/ActionButton";
 import TextBox from "./components/TextBox";
+import { LandingPage } from "./pages/LandingPage";
+import { Bedroom } from "./pages/Bedroom";
 
 function App() {
     const [currentPage, setCurrentPage] = useState('landingPage');
     
     if (currentPage === 'landingPage') {
-        return (
-            <div id="landingPage"
-                className="flex flex-col items-center justify-center text-center gap-10 w-screen px-[18px] lg:px-[60px]">
-
-                <h1 className="font-normal text-[26px] xl:text-[37px] sm:text-[34px]">Electronic Literature <br />Final Project</h1>
-
-                <button onClick={() => setCurrentPage('bedroom')}
-                    className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer">
-                    Start
-                </button>
-
-            </div>
-        )
+        return <LandingPage setCurrentPage={setCurrentPage} />
     }
 
     // from landingPage
     if (currentPage === 'bedroom') {
-        return (
-            <div 
-                className="flex flex-col h-screen text-center w-screen px-[18px] lg:px-[60px] py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p>
-                        You have just risen from your bed, and to cherish the beautiful morning, you decide to make your usual hot chocolate drink and sit on the porch of your house. What a serene sensation! The warming hot cocoa accompanying the tranquil rain, which isn’t hard enough that its splatters don’t hit the tip of your feet.
-                        <br /><br />
-                        “I could probably sit here all day!” 
-                        <br /><br />
-                        What better way to start an important day like this? Remember, you have a crucial theatrical performance tonight at 7, yesterday (Sunday) was the last day you should’ve practiced the lines and gestures. Today should be entirely focused on clearing your mind and going through the day normally. Try and unwind; you often get nervous when things don’t go your desired way. Otherwise, your shame demon will come to haunt you again. You can’t be having that, can you?
-                        <br /><br />
-                        Now, you have one relaxing hour left before you have to start preparing yourself to go to campus. What will you do?
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full py-6 gap-2.5">
-
-                    <ActionButton onClick={() => setCurrentPage('nothing')} text="Nothing." />
-                    
-                    <ActionButton onClick={() => setCurrentPage('readBook')} text="Read a book!" />
-                    
-                    <ActionButton onClick={() => setCurrentPage('openPhone')} text="Open your phone and watch Instagram Reels." />
-
-                </div>
-
-            </div>
-        )
-            
+        return <Bedroom setCurrentPage={setCurrentPage} />
     }
 
     // from bedroom
@@ -944,6 +904,7 @@ function App() {
         )
     
     }
+
     if (currentPage === 'goToCanteen') {
         return (
 
