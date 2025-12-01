@@ -4,9 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/choice-game/",
   plugins: [
     react(),
     tailwindcss(),
   ],
+  base: "/choice-game/",
 })
