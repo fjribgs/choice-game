@@ -4,7 +4,14 @@ import TextBox from "./components/TextBox";
 import { LandingPage } from "./pages/LandingPage";
 import { Bedroom } from "./pages/Bedroom";
 import { Nothing } from "./pages/Nothing";
-
+import { ReadBook } from "./pages/ReadBook";
+import { OpenPhone } from "./pages/OpenPhone";
+import { StartLePetitPrince } from "./pages/StartLePetitPrince";
+import { ContinuePridePrejudice } from "./pages/ContinuePridePrejudice";
+import { ContinueReadingPridePrejudice } from "./pages/ContinueReadingPridePrejudice";
+import { CheckMessages } from "./pages/CheckMessage";
+import { FindYourselfOpeningPhone } from "./pages/FindYourselfOpeningPhone";
+import { ContinueReading2 } from "./pages/ContinueReading2";
 
 function App() {
     const [currentPage, setCurrentPage] = useState('landingPage');
@@ -25,232 +32,42 @@ function App() {
 
     // from bedroom
     if (currentPage === 'readBook') {
-        return (
-
-            <div id="readBook"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p>
-                        (What book will you read?)
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-                    <button onClick={() => setCurrentPage('startLePetitPrince')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-
-                        Start <i>Le Petit Prince</i>!
-
-                    </button>
-
-                    <button onClick={() => setCurrentPage('continuePridePrejudice')}
-                        className="text-(--bg) text-[18px] xl:text-[22px] bg-(--normal) rounded-2xl px-20 py-2.5 font-semibold hover:bg-(--hover) hover:text-[20px] hover:xl:text-[26px] active:bg-(--active) active:xl:text-[20px] transition-all duration-200 cursor-pointer w-full">
-
-                        Continue <i>Pride and Prejudice</i> (currently on chapter 46)
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        )
+        return <ReadBook setCurrentPage={setCurrentPage} />
     }
 
     // from bedroom
     if (currentPage === 'openPhone') {
-        return (
-
-            <div id="openPhone"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p>
-                        <button onClick={() => setCurrentPage('bedroom')}
-                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Is that really how you want to savor the day?</button>
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-                </div>
-
-            </div>
-
-        )
+        return <OpenPhone setCurrentPage={setCurrentPage} />
     }
 
     // from readBook
     if (currentPage === 'startLePetitPrince') {
-        return (
-
-            <div id="startLePetitPrince"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p>
-                        <button onClick={() => setCurrentPage('readBook')}
-                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">“Eh, I don’t think I’d want to start something new today..”</button>
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-                </div>
-
-            </div>
-
-        )
+        return <StartLePetitPrince setCurrentPage={setCurrentPage} />
     }
 
     // from readBook
     if (currentPage === 'continuePridePrejudice') {
-        return (
-
-            <div id="continuePridePrejudice"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p className="text-yellow-100">
-                        “Now, where was I? The last time I read this book was two days ago, and the scene where I left off I can’t immediately remember. Oh! Yes! Lydia had just fled with Wickham to marry in Scotland! I remember now. What an unexpected twist, indeed. I am very intrigued in finding out what happens later, especially since Darcy’s politeness during the course has undoubtedly entranced Elizabeth.”
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-                    <ActionButton onClick={() => setCurrentPage('continueReadingPridePrejudice')} text="(continue reading)" />
-
-                </div>
-
-            </div>
-
-        )
+        return <ContinuePridePrejudice setCurrentPage={setCurrentPage} />
     }
 
     // from continuePridePrejudice
     if (currentPage === 'continueReadingPridePrejudice') {
-        return (
-
-            <div id="continueReadingPridePrejudice"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p className="text-red-400">
-                        [<span className="font-bold">INTERRUPTION</span>] You find yourself opening your phone.
-                        <br /> 
-                        [<span className="font-bold">CAUTION</span>] YOU BEGIN TO FEEL UNEASY.
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-                    <ActionButton onClick={() => setCurrentPage('findYourselfOpeningPhone')} text="Fight BACK!!!" />
-
-                    <ActionButton onClick={() => setCurrentPage('checkMessages')} text="Just check for text messages." />
-
-                </div>
-
-            </div>
-
-        )
+        return <ContinueReadingPridePrejudice setCurrentPage={setCurrentPage} />
     }
 
     // from continueReadingPridePrejudice
     if (currentPage === 'checkMessages') {
-        return (
-
-            <div id="checkMessages"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p>
-                        You have received none.
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-                    <ActionButton onClick={() => setCurrentPage('findYourselfOpeningPhone')} text="(continue reading)" />
-
-                </div>
-
-            </div>
-        )
+        return <CheckMessages setCurrentPage={setCurrentPage} />
     }
 
     // from checkMessages
     if (currentPage === 'findYourselfOpeningPhone') {
-        return (
-
-            <div id="checkMessages"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p className="text-red-400">
-                        [<span className="font-bold">ERROR</span>] [<span className="font-bold">INTERRUPTION</span>] You find yourself opening your phone.
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-                    <ActionButton onClick={() => setCurrentPage('continueReading2')} text="(continue reading)" />
-
-                </div>
-
-            </div>
-
-        )
+        return <FindYourselfOpeningPhone setCurrentPage={setCurrentPage} />
     }
 
     // from findYourselfOpeningPhone
     if (currentPage === 'continueReading2') {
-        return (
-
-            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
-
-                <TextBox>
-
-                    <p className="text-yellow-100">
-                        “What a lovely forenoon, rain and hot cocoa pair<br />
-                        Befriending me and my book beneath the frore air
-                        <br /><br />
-                        If only such a malaise was ascribable —<br />
-                        Wontedly checking my phone, as if my own child<br />
-                        — My Austen reading time would be inerrable”
-                        <br /><br />
-                        …
-                        <br /><br />
-                        <button onClick={() => setCurrentPage('continueReading3')}
-                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">“Ach, no wonder I’ve only gotten through three-fourths of the book in two months!“</button>
-
-                    </p>
-
-                </TextBox>
-
-                <div className="flex flex-col flex-1 w-full h-full gap-2.5">
-
-
-                </div>
-
-            </div>
-
-        )
+        return <ContinueReading2 setCurrentPage={setCurrentPage} />
     }
 
     // from continueReading2
