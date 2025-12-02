@@ -74,7 +74,7 @@ function App() {
     if (currentPage === 'continueReading3') {
         return (
 
-            <div className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+            <div className="flex flex-col h-screen text-center w-screen px-[18px] lg:px-[60px] py-6 xl:py-11">
 
                 <TextBox>
 
@@ -99,8 +99,8 @@ function App() {
 
                 </TextBox>
 
-                <div className="flex flex-col flex-1 w-full gap-2.5">
-
+                <div className="flex h-screen flex-col flex-1 w-full gap-2.5">
+                    
                 </div>
 
             </div>
