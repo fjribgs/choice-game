@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import ActionButton from "./components/ActionButton";
 import TextBox from "./components/TextBox";
 import { LandingPage } from "./pages/LandingPage";
@@ -14,10 +16,23 @@ import { FindYourselfOpeningPhone } from "./pages/FindYourselfOpeningPhone";
 import { ContinueReading2 } from "./pages/ContinueReading2";
 
 function App() {
+    const container = useRef();
+
+    useGSAP(() => {
+        gsap.to(container.current, {
+            x: 100,
+            duration: 1.5
+        })
+    });
+
     const [currentPage, setCurrentPage] = useState('landingPage');
     
     if (currentPage === 'landingPage') {
-        return <LandingPage setCurrentPage={setCurrentPage} />
+        return (
+            <div ref={container}>
+                <LandingPage setCurrentPage={setCurrentPage} />
+            </div>
+        )
     }
 
     // from landingPage
