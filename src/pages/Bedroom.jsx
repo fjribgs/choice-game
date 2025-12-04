@@ -3,7 +3,7 @@ import TextBox from "../components/TextBox"
 
 export function Bedroom( {setCurrentPage} ) {
     return (
-        <div 
+        <div id="bedroom"
             className="flex flex-col h-screen text-center w-screen px-[18px] lg:px-[60px] py-6 xl:py-11">
 
             <TextBox>
