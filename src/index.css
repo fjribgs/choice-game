@@ -12,3 +12,7 @@
     --bg: #240115;
     --dialogue: 
 }
+
+div::-webkit-scrollbar {
+    display: none;
+}

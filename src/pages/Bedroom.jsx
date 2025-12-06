@@ -9,13 +9,18 @@ export function Bedroom( {setCurrentPage} ) {
             <TextBox>
 
                 <p>
-                    You have just risen from your bed, and to cherish the beautiful morning, you decide to make your usual hot chocolate drink and sit on the porch of your house. What a serene sensation! The warming hot cocoa accompanying the tranquil rain, which isn’t hard enough that its splatters don’t hit the tip of your feet.
+                    CORTEX SYSTEM: “Welcome, Dopaminergic Neuron! I am the brain of this human’s, Timmy, vessel. This is Timmy’s Mesolimbic System. Quite the sight, ey? Thank Hypothalamus that Timmy takes good care of his physical health by eating and drinking well. As a result, our Astrocytes and Pyramidal Neurons are in prime working form! Eh, sure the other cells are doing well too, but they aren’t as cool looking, HAHA! As for his mental well-being, however, umm … Vagus! How is he doing?”
                     <br /><br />
-                    “I could probably sit here all day!” 
+                    VAGUS NERVE: “He's doing surprisingly well, sire.”
                     <br /><br />
-                    What better way to start an important day like this? Remember, you have a crucial theatrical performance tonight at 7, yesterday (Sunday) was the last day you should’ve practiced the lines and gestures. Today should be entirely focused on clearing your mind and going through the day normally. Try and unwind; you often get nervous when things don’t go your desired way. Otherwise, your shame demon will come to haunt you again. You can’t be having that, can you?
+                    CORTEX SYSTEM: “Yes … Good … We’re still going to need YOUR special help though. Ah, I bet you have some questions, do you? Well, as I was, Dopaminergic Neuron No. 556,246, and as you can see, we have been running quite a system here. With Timmy now in college, he seems to be more stressed out. [COMMOTION]. That sound that you just heard, is Timmy waking up. He will probably wash his face and make some hot chocolate, seeing that the boys from Auditory just sent a report that it’s raining. 
                     <br /><br />
-                    Now, you have one relaxing hour left before you have to start preparing yourself to go to campus. What will you do?
+                    You might be wondering, out of nearly 600.000 of your kin that you see around, why you look the most different. To say it gently, your mere birth was an anomaly. The Genetic Department appeared to have triggered a certain systemic error, and you were mutated as a result — you used to be inanimate not four hours ago. Sloppy department, they are. Oh, I wish I could admonish them directly and not through electric signals. 
+                    <br /><br />
+                    Anyways, when you were born, you were unconscious, with weird bumps at the side of your sphere. I checked you out personally, and it turned out that … how do I say this … unlike your kin, you only have a day to live; about twenty one hours left at the moment. Our experts also say that you also have a considerably severe case of hypokinetic dysarthria — your vocal system partly covered by your exoskeleton.
+                    <br /><br />
+                    I am terribly sorry.
+                    <div className="h-8"></div>
                 </p>
 
             </TextBox>
