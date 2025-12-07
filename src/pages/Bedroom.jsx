@@ -1,5 +1,6 @@
 import ActionButton from "../components/ActionButton"
 import TextBox from "../components/TextBox"
+import NextButton from "../components/NextButton"
 
 export function Bedroom( {setCurrentPage} ) {
     return (
@@ -19,13 +20,15 @@ export function Bedroom( {setCurrentPage} ) {
                     <br /><br />
                     Anyways, when you were born, you were unconscious, with weird bumps at the side of your sphere. I checked you out personally, and it turned out that … how do I say this … unlike your kin, you only have a day to live; about twenty one hours left at the moment. Our experts also say that you also have a considerably severe case of hypokinetic dysarthria — your vocal system partly covered by your exoskeleton.
                     <br /><br />
-                    I am terribly sorry.
-                    <div className="h-8"></div>
+                    <NextButton onClick={() => {
+                        setCurrentPage('nothing')
+                    }} text="I am terribly sorry."/>
+                    <div className="h-6"></div>
                 </p>
 
             </TextBox>
 
-            <div className="flex flex-col flex-1 w-full py-6 gap-2.5">
+            <div className=" flex-col flex-1 w-full py-6 gap-2.5 hidden">
 
                 <ActionButton onClick={() => setCurrentPage('nothing')} text="Nothing." />
                     
