@@ -9,6 +9,8 @@ export function ReadBook( {setCurrentPage} ) {
                 <TextBox>
 
                     <p>
+                        BINGO!
+                        <br /><br />
                         (What book will you read?)
                     </p>
 

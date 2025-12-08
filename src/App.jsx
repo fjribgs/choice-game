@@ -12,10 +12,16 @@ import { ContinueReadingPridePrejudice } from "./pages/ContinueReadingPridePreju
 import { CheckMessages } from "./pages/CheckMessage";
 import { FindYourselfOpeningPhone } from "./pages/FindYourselfOpeningPhone";
 import { ContinueReading2 } from "./pages/ContinueReading2";
+import { TerriblySorry } from "./pages/TerriblySorry";
+import { Sigh } from "./pages/Sigh";
+import { KickSomeButt } from "./pages/KickSomeButt";
 
 const pages = {
     'landingPage': LandingPage,
     'bedroom': Bedroom,
+    'terriblySorry': TerriblySorry,
+    'sigh': Sigh,
+    'kickSomeButt': KickSomeButt,
     'nothing': Nothing,
     'readBook': ReadBook,
     'openPhone': OpenPhone,

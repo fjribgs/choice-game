@@ -21,7 +21,7 @@ export function Bedroom( {setCurrentPage} ) {
                     Anyways, when you were born, you were unconscious, with weird bumps at the side of your sphere. I checked you out personally, and it turned out that … how do I say this … unlike your kin, you only have a day to live; about twenty one hours left at the moment. Our experts also say that you also have a considerably severe case of hypokinetic dysarthria — your vocal system partly covered by your exoskeleton.
                     <br /><br />
                     <NextButton onClick={() => {
-                        setCurrentPage('nothing')
+                        setCurrentPage('terriblySorry')
                     }} text="I am terribly sorry."/>
                     <div className="h-6"></div>
                 </p>

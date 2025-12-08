@@ -1,4 +1,5 @@
 import ActionButton from "../components/ActionButton"
+import NextButton from "../components/NextButton"
 import TextBox from "../components/TextBox"
 
 export function OpenPhone( {setCurrentPage} ) {
@@ -9,8 +10,7 @@ export function OpenPhone( {setCurrentPage} ) {
                 <TextBox>
 
                     <p>
-                        <button onClick={() => setCurrentPage('bedroom')}
-                            className="cursor-pointer text-(--normal) underline hover:font-bold transition-all duration-200 text-start">Is that really how you want to savor the day?</button>
+                        CORTEX SYSTEM: <NextButton onClick={() => setCurrentPage('kickSomeButt')} text='"Is that really how you want Timmy to spend the day?"'/>
                     </p>
 
                 </TextBox>

@@ -9,14 +9,14 @@ export function Nothing( {setCurrentPage} ) {
                 <TextBox>
 
                     <p>
-                        Well, while the rain is quite an entertaining sight itself, it will probably become boring within the next hour.
+                        CORTEX SYSTEM: Well, while the rain is quite an entertaining sight itself, it will probably become boring within the next hour. It’s okay; you’ll be properly trained to make these decisions in no time.
                     </p>
 
                 </TextBox>
 
                 <div className="flex flex-col flex-1 w-full h-full gap-2.5">
 
-                    <ActionButton onClick={() => setCurrentPage('bedroom')} text="(Go back)" />
+                    <ActionButton onClick={() => setCurrentPage('kickSomeButt')} text="Go back." />
 
                 </div>
 
