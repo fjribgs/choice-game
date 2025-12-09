@@ -28,13 +28,7 @@ export function Bedroom( {setCurrentPage} ) {
 
             </TextBox>
 
-            <div className=" flex-col flex-1 w-full py-6 gap-2.5 hidden">
-
-                <ActionButton onClick={() => setCurrentPage('nothing')} text="Nothing." />
-                    
-                <ActionButton onClick={() => setCurrentPage('readBook')} text="Read a book!" />
-                    
-                <ActionButton onClick={() => setCurrentPage('openPhone')} text="Open your phone and watch Instagram Reels." />
+            <div className="flex-col flex-1 w-full py-6 gap-2.5 hidden">
 
             </div>
 
