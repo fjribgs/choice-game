@@ -3,18 +3,17 @@ import ActionButton from "./components/ActionButton";
 import TextBox from "./components/TextBox";
 import { LandingPage } from "./pages/LandingPage";
 import { Bedroom } from "./pages/Bedroom";
+import { TerriblySorry } from "./pages/TerriblySorry";
+import { Sigh } from "./pages/Sigh";
+import { KickSomeButt } from "./pages/KickSomeButt";
 import { Nothing } from "./pages/Nothing";
 import { ReadBook } from "./pages/ReadBook";
 import { OpenPhone } from "./pages/OpenPhone";
 import { StartLePetitPrince } from "./pages/StartLePetitPrince";
 import { ContinuePridePrejudice } from "./pages/ContinuePridePrejudice";
-import { ContinueReadingPridePrejudice } from "./pages/ContinueReadingPridePrejudice";
-import { CheckMessages } from "./pages/CheckMessage";
-import { FindYourselfOpeningPhone } from "./pages/FindYourselfOpeningPhone";
-import { ContinueReading2 } from "./pages/ContinueReading2";
-import { TerriblySorry } from "./pages/TerriblySorry";
-import { Sigh } from "./pages/Sigh";
-import { KickSomeButt } from "./pages/KickSomeButt";
+import { GrowingStronger } from "./pages/GrowingStronger";
+import { BreakALeg } from "./pages/BreakALeg";
+import { RollOut } from "./pages/RollOut";
 
 const pages = {
     'landingPage': LandingPage,
@@ -27,20 +26,30 @@ const pages = {
     'openPhone': OpenPhone,
     'startLePetitPrince': StartLePetitPrince,
     'continuePridePrejudice': ContinuePridePrejudice,
-    'continueReadingPridePrejudice': ContinueReadingPridePrejudice,
-    'checkMessages': CheckMessages,
-    'findYourselfOpeningPhone': FindYourselfOpeningPhone,
-    'continueReading2': ContinueReading2
+    'growingStronger': GrowingStronger,
+    'breakALeg': BreakALeg,
+    'rollOut': RollOut
 }
 
 function App() {
     const [currentPage, setCurrentPage] = useState('landingPage');
+    const [isLePetitVisited, setIsLePetitVisited] = useState(false);
 
+    if (currentPage === 'readBook') {
+        return <ReadBook 
+                    setCurrentPage={setCurrentPage}
+                    isLePetitVisited={isLePetitVisited}
+                    setIsLePetitVisited={setIsLePetitVisited}
+        />
+    }
+    
     const CurrentPage = pages[currentPage]
 
     if (CurrentPage) {
         return <CurrentPage setCurrentPage={setCurrentPage} />
     }
+
+    
 
     // from continueReading2
     if (currentPage === 'continueReading3') {

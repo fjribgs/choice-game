@@ -9,7 +9,7 @@ export function Nothing( {setCurrentPage} ) {
                 <TextBox>
 
                     <p>
-                        CORTEX SYSTEM: Well, while the rain is quite an entertaining sight itself, it will probably become boring within the next hour. It’s okay; you’ll be properly trained to make these decisions in no time.
+                        CORTEX SYSTEM: "Well, while the rain is quite an entertaining sight itself, it will probably become boring within the next hour. It’s okay; you’ll be properly trained to make these decisions in no time."
                     </p>
 
                 </TextBox>
