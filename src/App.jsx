@@ -16,6 +16,8 @@ import { BreakALeg } from "./pages/BreakALeg";
 import { RollOut } from "./pages/RollOut";
 import { Start } from "./pages/Start";
 import { AttackAxonClump } from "./pages/AttackAxonClump";
+import { ShootGun } from "./pages/ShootGun";
+import { HaughtyCortex } from "./pages/HaughtyCortex";
 
 const pages = {
     'start': Start,
@@ -32,7 +34,9 @@ const pages = {
     'growingStronger': GrowingStronger,
     'breakALeg': BreakALeg,
     'rollOut': RollOut,
-    'attackAxonClumpA': AttackAxonClump
+    'attackAxonClumpA': AttackAxonClump,
+    'shootGun': ShootGun,
+    'haughtyCortex': HaughtyCortex
 }
 
 function App() {

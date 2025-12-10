@@ -59,7 +59,7 @@ export function AttackAxonClump( {currentPage, setCurrentPage} ) {
                         <br /><br />
                         DN-1: “Hey! New guy, don’t hide! Go after them! I’ll back you up.”
                         <br /><br />
-                        Is he crazy? There are about thirty of them bunched up! It’s too late; at this point, they have noticed DN-1’s approach. <NextButton text="Jump out and shoot your gun." onClick={() => setCurrentPage('ShootGun')}/>
+                        Is he crazy? There are about thirty of them bunched up! It’s too late; at this point, they have noticed DN-1’s approach. <NextButton text="Jump out and shoot your gun." onClick={() => setCurrentPage('shootGun')}/>
                     </p>
 
                 </TextBox>
