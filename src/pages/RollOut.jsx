@@ -5,7 +5,7 @@ import NextButton from "../components/NextButton"
 export function RollOut( {setCurrentPage} ) {
     return (
             <div id="continuePridePrejudice"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+                className="flex flex-col text-center pb-12 gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
                 <TextBox>
 

@@ -5,7 +5,7 @@ import TextBox from "../components/TextBox"
 export function OpenPhone( {setCurrentPage} ) {
     return (
             <div id="openPhone"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+                className="flex flex-col text-center gap-6 w-screen px-[18px] pb-12 lg:px-[60px] h-screen py-6 xl:py-11">
 
                 <TextBox>
 

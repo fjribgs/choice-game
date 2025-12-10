@@ -5,14 +5,14 @@ import NextButton from "../components/NextButton"
 export function GrowingStronger( {setCurrentPage} ) {
     return (
             <div id="continuePridePrejudice"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+                className="flex flex-col text-center gap-6 w-screen pb-12 px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
                 <TextBox>
 
                     <p>
-                       [INTERRUPTION] [INTERRUPTION] [INTERRUPTION]
+                       <span className="text-red-500">[INTERRUPTION] [INTERRUPTION] [INTERRUPTION]
                        <br /><br />
-                        [CAUTION] MICROGLIA SWARM ON Sector 12-B … TIMMY IS OPENING HIS PHONE. 
+                        [CAUTION]</span> MICROGLIA SWARM ON Sector 12-B … TIMMY IS OPENING HIS PHONE. 
                         <br /><br />
                         CORTEX SYSTEM: “See?”
                         <br /><br />

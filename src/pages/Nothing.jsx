@@ -4,7 +4,7 @@ import TextBox from "../components/TextBox"
 export function Nothing( {setCurrentPage} ) {
     return (
         <div id="nothing"
-                className="flex flex-col text-center gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
+                className="flex flex-col text-center pb-12 gap-6 w-screen px-[18px] lg:px-[60px] h-screen py-6 xl:py-11">
 
                 <TextBox>
 

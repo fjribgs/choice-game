@@ -4,7 +4,7 @@ import NextButton from "../components/NextButton"
 
 export function Sigh( {setCurrentPage} ) {
     return (
-        <div className="flex flex-col h-screen text-center w-screen px-[18px] lg:px-[60px] py-6 xl:py-11">
+        <div className="flex flex-col h-screen text-center pb-12 w-screen px-[18px] lg:px-[60px] py-6 xl:py-11">
 
             <TextBox>
 
