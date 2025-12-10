@@ -5,11 +5,13 @@ import NextButton from "../components/NextButton"
 export function Bedroom( {setCurrentPage} ) {
     return (
         <div id="bedroom"
-            className="flex flex-col h-screen text-center w-screen px-[18px] lg:px-[60px] pb-12 py-6 xl:py-11">
+            className="flex flex-col h-screen text-center w-screen px-3 sm:px-[18px] lg:px-[60px] pb-12 py-6 xl:py-11">
 
             <TextBox>
 
                 <p>
+                    Oh, Great Quest?
+                    <br /><br />
                     CORTEX SYSTEM: “Welcome, <i>Dopaminergic Neuron</i>! I am the brain of this human’s, Timmy, vessel. This is Timmy’s Mesolimbic System. Quite the sight, ey? Thank Hypothalamus that Timmy takes good care of his physical health by eating and drinking well. As a result, our Astrocytes and Pyramidal Neurons are in prime working form! Eh, sure the other cells are doing well too, but they aren’t as cool looking, HAHA! As for his mental well-being, however, umm … Vagus! How is he doing?”
                     <br /><br />
                     VAGUS NERVE: “He's doing surprisingly well, sire.”
