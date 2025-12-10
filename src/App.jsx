@@ -18,6 +18,9 @@ import { Start } from "./pages/Start";
 import { AttackAxonClump } from "./pages/AttackAxonClump";
 import { ShootGun } from "./pages/ShootGun";
 import { HaughtyCortex } from "./pages/HaughtyCortex";
+import { LookAtThis } from "./pages/LookAtThis";
+import { AmICorrect } from "./pages/AmICorrect";
+import { Thump } from "./pages/Thump";
 
 const pages = {
     'start': Start,
@@ -36,7 +39,10 @@ const pages = {
     'rollOut': RollOut,
     'attackAxonClumpA': AttackAxonClump,
     'shootGun': ShootGun,
-    'haughtyCortex': HaughtyCortex
+    'haughtyCortex': HaughtyCortex,
+    'lookAtThis': LookAtThis,
+    'amICorrect': AmICorrect,
+    'thump': Thump
 }
 
 function App() {
