@@ -21,10 +21,15 @@ import { HaughtyCortex } from "./pages/HaughtyCortex";
 import { LookAtThis } from "./pages/LookAtThis";
 import { AmICorrect } from "./pages/AmICorrect";
 import { Thump } from "./pages/Thump";
+import { Why } from "./pages/Why";
+import { NukeThem } from "./pages/NukeThem";
+import { TrippleDots } from "./pages/TripleDots";
+import { HaveAPlan } from "./pages/HaveAPlan";
+import { WhereWasI } from "./pages/WhereWasI";
 
 const pages = {
-    'start': Start,
     'landingPage': LandingPage,
+    'start': Start,
     'bedroom': Bedroom,
     'terriblySorry': TerriblySorry,
     'sigh': Sigh,
@@ -40,9 +45,14 @@ const pages = {
     'attackAxonClumpA': AttackAxonClump,
     'shootGun': ShootGun,
     'haughtyCortex': HaughtyCortex,
+    'why': Why,
     'lookAtThis': LookAtThis,
     'amICorrect': AmICorrect,
-    'thump': Thump
+    'thump': Thump,
+    'nukeThem': NukeThem,
+    'threeDots': TrippleDots,
+    'haveAPlan': HaveAPlan,
+    'whereWasI': WhereWasI
 }
 
 function App() {
