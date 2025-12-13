@@ -17,7 +17,7 @@ export function WhereWasI( {setCurrentPage} ) {
                     <br /><br />
                     NEURON ARMY: “YES, Sire.”
                     <br /><br />
-                    CORTEX SYSTEM: “Oh, and while you’re there, occupy some Axons — your influence will help Timmy greatly. Also, report the inscriptions engraved on them to find out what’s causing The Inhibition to grow. There are typically symbols on each Axon if you flip them over that signifies their contribution to Timmy’s emotion. <NextButton onClick={() => setCurrentPage('lookAtThis')} text='Be a lad, will you?"'/>
+                    CORTEX SYSTEM: “Oh, and while you’re there, occupy some Axons — your influence will help Timmy greatly. Also, report the inscriptions engraved on them to find out what’s causing The Inhibition to grow. There are typically symbols on each Axon if you flip them over that signifies their contribution to Timmy’s emotion. <NextButton onClick={() => setCurrentPage('beALad')} text='Be a lad, will you?"'/>
                     <div className="h-5"></div>
                 </p>
 

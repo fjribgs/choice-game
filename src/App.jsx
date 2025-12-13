@@ -26,6 +26,14 @@ import { NukeThem } from "./pages/NukeThem";
 import { TrippleDots } from "./pages/TripleDots";
 import { HaveAPlan } from "./pages/HaveAPlan";
 import { WhereWasI } from "./pages/WhereWasI";
+import { BeALad } from "./pages/BeALad";
+import { TheInhibition } from "./pages/TheInhibition";
+import { UrThrough } from "./pages/UrThrough";
+import { WhatHappened } from "./pages/WhatHappened";
+import { What } from "./pages/What";
+import { YouClimb } from "./pages/youClimb";
+import { ThroneRoom } from "./pages/ThroneRoom";
+import { HellYeah } from "./pages/HellYeah";
 
 const pages = {
     'landingPage': LandingPage,
@@ -52,7 +60,15 @@ const pages = {
     'nukeThem': NukeThem,
     'threeDots': TrippleDots,
     'haveAPlan': HaveAPlan,
-    'whereWasI': WhereWasI
+    'whereWasI': WhereWasI,
+    'beALad': BeALad,
+    'theInhibition': TheInhibition,
+    'urThrough': UrThrough,
+    'whatHappened': WhatHappened,
+    'what': What,
+    'youClimb': YouClimb,
+    'throneRoom': ThroneRoom,
+    'hellYeah': HellYeah
 }
 
 function App() {
@@ -61,8 +77,18 @@ function App() {
     const [isNothingVisited, setIsNothingVisited] = useState(false);
     const [isOpenPhoneVisited, setIsOpenPhoneVisited] = useState(false);
     const [isLePetitVisited, setIsLePetitVisited] = useState(false);
+
     const [isAxonAVisited, setIsAxonAVisited] = useState(false);
     const [isAxonBVisited, setIsAxonBVisited] = useState(false);
+
+    const [isDriftUpwardVisited, setIsDriftUpwardVisited] = useState(false);
+    const [isDriftDownwardVisited, setIsDriftDownwardVisited] = useState(false);
+    const [isDriftLaterallyVisited, setIsDriftLaterallyVisited] = useState(false);
+
+    const [isLeftVisited, setIsLeftVisited] = useState(false);
+    const [isRightVisited, setIsRightVisited] = useState(false);
+    const [isForwardVisited, setIsForwardVisited] = useState(false);
+
 
     if (currentPage === 'kickSomeButt') {
         return <KickSomeButt
@@ -111,6 +137,44 @@ function App() {
                     setCurrentPage={setCurrentPage}
                     currentPage={currentPage}    
         />
+    }
+
+    if (currentPage === 'theInhibition' ||
+        currentPage === 'theInhibition2' ||
+        currentPage === 'driftUpward' ||
+        currentPage === 'driftDownward' ||
+        currentPage === 'zoom' ||
+        currentPage === 'driftLaterally' ||
+        currentPage === 'driftAhead' ||
+        currentPage === 'areYouSure' ||
+        currentPage === 'slipPast'
+    ) {
+        return <TheInhibition 
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
+                    isDriftUpwardVisited={isDriftUpwardVisited}
+                    setIsDriftUpwardVisited={setIsDriftUpwardVisited}
+                    isDriftDownwardVisited={isDriftDownwardVisited}
+                    setIsDriftDownwardVisited={setIsDriftDownwardVisited}
+                    isDriftLaterallyVisited={isDriftLaterallyVisited}
+                    setIsDriftLaterallyVisited={setIsDriftLaterallyVisited}
+        />
+    }
+
+    if (currentPage === 'whatHappened' ||
+        currentPage === 'goLeft' ||
+        currentPage === 'goRight' ||
+        currentPage === 'goForward'
+    ) {
+        return <WhatHappened 
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
+                    isLeftVisited={isLeftVisited}
+                    isRightVisited={isRightVisited}
+                    isForwardVisited={isForwardVisited}
+                    setIsLeftVisited={setIsLeftVisited}
+                    setIsRightVisited={setIsRightVisited}
+                    setIsForwardVisited={setIsForwardVisited}/>
     }
     
     const CurrentPage = pages[currentPage]
