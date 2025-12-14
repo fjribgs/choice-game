@@ -34,6 +34,8 @@ import { What } from "./pages/What";
 import { YouClimb } from "./pages/youClimb";
 import { ThroneRoom } from "./pages/ThroneRoom";
 import { HellYeah } from "./pages/HellYeah";
+import { ThrowTheBomb } from "./pages/ThrowTheBomb";
+import { OpenTheDoor } from "./pages/OpenTheDoor";
 
 const pages = {
     'landingPage': LandingPage,
@@ -88,7 +90,6 @@ function App() {
     const [isLeftVisited, setIsLeftVisited] = useState(false);
     const [isRightVisited, setIsRightVisited] = useState(false);
     const [isForwardVisited, setIsForwardVisited] = useState(false);
-
 
     if (currentPage === 'kickSomeButt') {
         return <KickSomeButt
@@ -175,6 +176,23 @@ function App() {
                     setIsLeftVisited={setIsLeftVisited}
                     setIsRightVisited={setIsRightVisited}
                     setIsForwardVisited={setIsForwardVisited}/>
+    }
+
+    if (currentPage === 'throwTheBomb' ||
+        currentPage === 'throwTheBomb2' ||
+        currentPage === 'throwTheBomb3'
+    ) {
+        return <ThrowTheBomb setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}/>
+    }
+
+    if (currentPage === 'openTheDoor' ||
+        currentPage === 'openTheDoor2' ||
+        currentPage === 'openTheDoor3' ||
+        currentPage === 'openTheDoor4'
+    ) {
+        return <OpenTheDoor setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}/>
     }
     
     const CurrentPage = pages[currentPage]

@@ -1,0 +1,119 @@
+import ActionButton from "../components/ActionButton"
+import TextBox from "../components/TextBox"
+import NextButton from "../components/NextButton"
+
+export function OpenTheDoor( {currentPage, setCurrentPage} ) {
+    if (currentPage === 'openTheDoor') {
+        return (
+            <div className="flex flex-col h-screen text-center w-screen px-3 sm:px-[18px] lg:px-[60px] pb-12 py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        The once lavish room is now covered in sickly yellow-green fluids. At the other end of the room, still … seated … the <NextButton onClick={() => setCurrentPage('openTheDoor2')} text='Microglian Leader??'/>
+                        <div className="h-5"></div>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex-col flex-1 w-full py-6 gap-2.5 hidden">
+
+                </div>
+
+            </div>
+        )
+    }
+
+    if (currentPage === 'openTheDoor2') {
+        return (
+            <div className="flex flex-col h-screen text-center w-screen px-3 sm:px-[18px] lg:px-[60px] pb-12 py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        [UNKNOWN]: “<i>HAHAHAHAHA!</i> How low do you presume of me? Excitotoxicity explosives?! What an insult. Pity my Microglian squires who did die, though — I have just grown a liking to them. The baroque hall? Eh, I can build a new one.
+                        <br /><br />
+                        Huh? Why did I not die, you ask? I seriously question Cortex's judgment if whoever he sent truly has no clue as to the answer of that question, <i><NextButton onClick={() => setCurrentPage('openTheDoor3')} text='HAHA!"'/></i>
+                        <div className="h-5"></div>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex-col flex-1 w-full py-6 gap-2.5 hidden">
+
+                </div>
+
+            </div>
+        )
+    }
+
+    if (currentPage === 'openTheDoor3') {
+        return (
+            <div className="flex flex-col h-screen text-center w-screen px-3 sm:px-[18px] lg:px-[60px] pb-12 py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        ASD-2: “I am ASD-2, and no neuron with your pathetic weaponry can ever eliminate me. For years untold, I have gone unnoticed. Despite being the same age as little ol’ Timmy, Cortex remained oblivious to my existence; thus, despite my happiness of knowing Cortex’s quasi-sagacity, such has caused my solitary life. It is time to return the blow. The Mesolimbic five-year-long record of no critical inertia? NO MORE! You think every anxiety and or fear push is by Microglia? Oh, how far of a devolution would I need to reach the level of influence Microglia offers. But, to prohibit their influence? You selfish pricks imperialize Axons as well, hypocrites. You think permanent whimsicality is the best option for Timmy’s future? Oh, you neurons are so heliocentric. You SHOULD NOT be the only one capable of occupying Axons. I will make sure the Cortex learns of this myself.
+                        <br /><br />
+                        I am irremovable as I am an intrinsic part of Timmy. Your bomb failed because you cannot kill the foundation of his personality. You cannot kill me; you cannot kill difference.
+                        <br /><br />
+                        TIMMY WILL REALIZE OF MY EXISTENCE, AND <NextButton text={`I WILL CONQUER THE MESOLIMBIC.`} onClick={() => setCurrentPage('openTheDoor4')}/>”
+                        <div className="h-5"></div>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex-col flex-1 w-full py-6 gap-2.5 hidden">
+
+                </div>
+
+            </div>
+        )
+    }
+
+    if (currentPage === 'openTheDoor4') {
+        return (
+            <div className="flex flex-col h-screen text-center w-screen px-3 sm:px-[18px] lg:px-[60px] pb-12 py-6 xl:py-11">
+
+                <TextBox>
+
+                    <p>
+                        (Three page gibberish growing from the line above)
+                        <br /><br />
+                        -
+                        <br /><br />
+                        (Beep, beep, call from Auditory)
+                        <br /><br />
+                        COCHLEAR REGISTRY: “Sire, Timmy was just finished being checked out by the new psychiatrist. Our apologies for the late report, as the session lasted way longer than we anticipated. Timmy has been diagnosed with Autism Spectrum Disorder Level 2. 
+                        <br /><br />
+                        I don’t know how we haven’t noticed for this long — it explains everything! Timmy is always weirdly sensitive and selectively orderly. Frankly, we, here in Auditory, concluded that Timmy was just deficient. I hope no other department reached that conclusion, and I hope the best for poor Timmy. I digress, Timmy is now, according to his mother, to temporarily stay at Grandmama’s. His parents sounded very shocked, though I think that it’s unfair to let Timmy stay somewhere else — although temporarily — for the sole purpose of curing the shock, especially when the diagnosis means that Timmy needs more support than ever. Jasper, on the other hand, while he was definitely there, never spoke. We couldn’t even hear his breathing nor his footsteps, so he must have been constantly far away. 
+                        <br /><br />
+                        Sire, they are now approaching the car. I’m afraid we need some information from you directly for certain preparations, as Vagus appears to be unavailable. What is Timmy’s level of drowsiness, and what is the likelihood of him sleeping soundly in the car?
+                        <br /><br />
+                        …
+                        <br /><br />
+                        Sire? 
+                        <br /><br />
+                        …
+                        <br /><br />
+                        Are you there? 
+                        <br /><br />
+                        …
+                        <br /><br />
+                        Sire?”
+                        <br /><br />
+                        [END OF TRANSMISSION]
+                        <div className="h-5"></div>
+                    </p>
+
+                </TextBox>
+
+                <div className="flex-col flex-1 w-full py-6 gap-2.5 hidden">
+
+                </div>
+
+            </div>
+        )
+    }
+}
