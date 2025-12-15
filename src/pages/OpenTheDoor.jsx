@@ -245,7 +245,7 @@ export function OpenTheDoor( {currentPage, setCurrentPage} ) {
                         <br /><br />
                         Sire?”
                         <br /><br />
-                        [END OF TRANSMISSION]
+                        <span className="text-red-500">[END OF TRANSMISSION]</span>
                         <div className="h-5"></div>
                     </p>
 
