@@ -211,7 +211,7 @@ export function TheInhibition( {
                     <TextBox>
 
                         <p>
-                            DN (plural): “LADS!! SHOOT THE CENTER!!”
+                            DNs: “LADS!! SHOOT THE CENTER!!”
                             <br /><br />
                             A slight opening was fleeting. <NextButton text='Slip past!' onClick={() => setCurrentPage('slipPast')}/>
                         </p>

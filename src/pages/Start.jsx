@@ -10,7 +10,7 @@ export function Start( {setCurrentPage} ) {
             <TextBox>
 
                 <p>
-                    <NextButton text="!?!?!?!?!?!?!?!?" onClick={() => setCurrentPage('bedroom')}/>
+                    <NextButton text="!?!?!?!?!?!?!?!?" onClick={() => setCurrentPage('ohGreatQuest')}/>
                 </p>
 
             </TextBox>

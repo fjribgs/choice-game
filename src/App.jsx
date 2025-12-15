@@ -36,10 +36,12 @@ import { ThroneRoom } from "./pages/ThroneRoom";
 import { HellYeah } from "./pages/HellYeah";
 import { ThrowTheBomb } from "./pages/ThrowTheBomb";
 import { OpenTheDoor } from "./pages/OpenTheDoor";
+import { OhGreatQuest } from "./pages/OhGreatQuest";
 
 const pages = {
     'landingPage': LandingPage,
     'start': Start,
+    'ohGreatQuest': OhGreatQuest,
     'bedroom': Bedroom,
     'terriblySorry': TerriblySorry,
     'sigh': Sigh,
@@ -74,7 +76,7 @@ const pages = {
 }
 
 function App() {
-    const [currentPage, setCurrentPage] = useState('landingPage');
+    const [currentPage, setCurrentPage] = useState('openTheDoor4');
 
     const [isNothingVisited, setIsNothingVisited] = useState(false);
     const [isOpenPhoneVisited, setIsOpenPhoneVisited] = useState(false);
@@ -189,7 +191,10 @@ function App() {
     if (currentPage === 'openTheDoor' ||
         currentPage === 'openTheDoor2' ||
         currentPage === 'openTheDoor3' ||
-        currentPage === 'openTheDoor4'
+        currentPage === 'openTheDoor4' ||
+        currentPage === 'openTheDoor5' ||
+        currentPage === 'openTheDoor6' ||
+        currentPage === 'openTheDoor7'
     ) {
         return <OpenTheDoor setCurrentPage={setCurrentPage}
                     currentPage={currentPage}/>

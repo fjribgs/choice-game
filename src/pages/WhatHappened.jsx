@@ -131,7 +131,7 @@ export function WhatHappened( {
                             <br /><br />
                             This one seems to tell a very fresh and familiar story — it’s Jasper’s scolding. How lucky that you can find out for yourself? By the looks of it, Jasper was mad at Timmy for the matter of rash improvisation. Jasper seemed to not have been very fond of Timmy’s independent decision to arrange the spice rack by chemical compound name — deeming it “unnecessarily idiotic” and that such stupidity is so quintessential of Timmy. Since Timmy doesn’t cook, and Jasper loves to, the scolding was protracted. Jasper’s voice was so loud and angry that Timmy kept stuttering and couldn’t even talk back much. The sensory symbols also indicate that Timmy was shaking for a long time even after Jasper was finished.  
                             <br /><br />
-                            Well, it would seem that the size of this clump proved understandable. <NextButton text='Odd lad, he is.' onClick={() => setCurrentPage('whatHappened')}/>
+                            Well, it would seem that the size of this clump proved <NextButton text='understandable.' onClick={() => setCurrentPage('whatHappened')}/>
                             <div className="h-5"></div>
                         </p>
 
