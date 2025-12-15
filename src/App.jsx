@@ -76,7 +76,7 @@ const pages = {
 }
 
 function App() {
-    const [currentPage, setCurrentPage] = useState('openTheDoor4');
+    const [currentPage, setCurrentPage] = useState('landingPage');
 
     const [isNothingVisited, setIsNothingVisited] = useState(false);
     const [isOpenPhoneVisited, setIsOpenPhoneVisited] = useState(false);
